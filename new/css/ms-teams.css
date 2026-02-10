@@ -1,0 +1,199 @@
+
+#new-marketing #new-header{
+    border-radius: var(--border-rad) var(--border-rad) 0 0;
+}
+#new-marketing #new-header .partner-logo {
+    height: 60px;
+    width: auto;
+    margin-left: 40px;
+    filter: grayscale(1) brightness(100);
+}
+
+#new-marketing #new-header .ms-logo {
+    height: 100px;
+    width: auto;
+}
+
+.grid {
+    display: grid;
+}
+
+.gap-9 {
+    gap: 2.25rem;
+}
+
+.pb-10 {
+    padding-bottom: 2.5rem;
+}
+
+.pt-10 {
+    padding-top: 2.5rem;
+}
+
+.ms-heading {
+    font-size: 36pt;
+    font-weight: 600;
+    letter-spacing: 0.05px;
+    color: white;
+}
+
+.ms-banner {
+    background-image: url('../assets/images/hero_banner.webp');
+    background-size: cover;
+    background-position: center;
+    height: 435px;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 0 0 var(--border-rad) var(--border-rad) ;
+}
+
+.ms-banner-p {
+    line-height: 32px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.number-card {
+    background: linear-gradient(95deg, #5B5FC7 22.33%, #444791 135.11%);
+    /* box; */
+    border: 4px solid #95C7E7;
+    /* ; */
+    box-shadow: 7px 7px 30px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 12px;
+    text-align: center;
+    gap: 30px;
+}
+
+.number-card h2 {
+    color: #8DE971;
+    font-family: 'SegoeUI Semibold', sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.number-card p {
+    color: #FFFFFF;
+    font-size: 24px;
+    margin: 0;
+}
+
+.all-layer-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.layer-card {
+    visibility: visible;
+    animation-delay: 0.4s;
+    animation-name: fadeInUp;
+    width: 220px;
+    height: auto;
+    border: 1px #595DC2 solid;
+    border-radius: 12px
+}
+
+.layer-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.layer-card p {
+    line-height: 22px;
+    padding: 20px
+}
+
+.learn-more {
+    width: 216px;
+    height: 55px;
+    padding: 11px 15px;
+    background: linear-gradient(133deg, #8DE971 1.26%, #49C5B1 88.12%);
+    box-shadow: 14px 14px 56px 0px rgba(34, 119, 103, 0.25);
+    border-radius: 59px;
+    overflow: hidden;
+    border: 1px white solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.learn-more div {
+    color: white;
+    font-size: 24px;
+    /* font-family: 'SegoeUI Semibold', sans-serif; */
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+
+    .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:text-5xl {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .md\:leading-\[120\%\] {
+        line-height: 120%;
+    }
+}
+
+@media screen and (max-width:767px) and (min-width:568px) {
+    .all-layer-cards {
+        justify-content: center;
+    }
+
+    .layer-card {
+        width: 47%;
+    }
+
+    .number-card p {
+        font-size: 16px;
+    }
+
+    .ms-heading {
+        font-size: 36px;
+        letter-spacing: 0.05px;
+
+    }
+    #new-marketing #new-header .partner-logo {
+        height: 50px;
+    }
+    #new-marketing #new-header .ms-logo {
+        height: 90px;
+    }
+}
+
+@media screen and (max-width:567px) {
+    .layer-card {
+        width: 100%;
+    }
+
+    .number-card p {
+        font-size: 16px;
+    }
+
+    .ms-heading {
+        font-size: 24px;
+        letter-spacing: 0.05px;
+
+    }
+    .ms-banner-p {
+        line-height: 24px;
+    }
+    #new-marketing #new-header .partner-logo {
+        height: 30px;
+        margin-left: 12px;
+    }
+    #new-marketing #new-header .ms-logo {
+        height: 58px;
+    }
+}

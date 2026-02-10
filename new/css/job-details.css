@@ -1,0 +1,96 @@
+/* ----------------------------------------job details------------------------------------------ */
+.job-details-banner{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 30px 0;
+    /* align-items: center; */
+}
+.job-details-banner .container{
+    border-bottom: 2px solid var(--theme-blue);
+
+}
+
+.job-details-banner .job-title{
+    color: var(--theme-blue);
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.job-details-banner p{
+    font-weight: 600;
+}
+
+.each-detail-req h4, .apply-job-form-title{
+    font-size: 20px;
+    color: var(--theme-blue);
+    font-weight: 600;
+}
+
+.each-detail-req h5{
+    font-size: 18px;
+    color: var(--theme-blue);
+    font-weight: 600;
+}
+
+.job-submission-form form{
+    display: flex;
+    /* gap: 10px; */
+    flex-wrap: wrap;
+}
+
+.job-submission-form form input, .job-submission-form form select{
+    width: 45%;
+    margin: 10px 20px 10px 0;
+    padding: 10px;
+    padding-left: 3px;
+    border: 0;
+    border-bottom: 1px solid var(--theme-blue);
+    background: transparent;
+}
+
+.job-submission-form form .resume-upload{
+    border-bottom: 0;
+}
+
+.job-submission-form form .job-apply-btn{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.job-submission-form form .job-apply-btn button{
+    border: 0;
+    background: var(--theme-blue);
+    color: #ffffff;
+    padding: 7px 20px;
+    border-radius: 20px;
+}
+
+.application-form{
+    padding: 30px;
+    background: #f3f3f3;
+    border-radius: var(--border-rad);
+}
+
+.each-detail-req ul{
+    list-style: none;
+    padding: 0;
+}
+
+.each-detail-req ul li{
+    padding-left: 32px;
+    position: relative;
+}
+
+.each-detail-req ul li:before {
+    content: "";
+    position: absolute;
+    background: var(--theme-sblue);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    left: 0;
+    top: 8px;
+}

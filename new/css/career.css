@@ -1,0 +1,116 @@
+.owl-career-img .item img{
+    border-radius: var(--border-rad);
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.owl-career-img .owl-dots .owl-dot.active span {
+    width: 30px;
+    background: var(--theme-blue);
+}
+
+.owl-career-img .owl-dots .owl-dot span {
+    transition: all .6s ease;
+}
+
+#core-values{
+    background: var(--theme-blue);
+    padding: 50px 0;
+    /* color: #ffffff; */
+}
+
+#core-values .first-card {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+#core-values .first-card h2{
+    color: #ffffff;
+    font-size: 60px;
+    margin-bottom: 0;
+}
+
+#core-values .other-card{
+   padding: 30px;
+   border-radius: var(--border-rad);
+   background: #ffffff;
+}
+
+#core-values .other-card .value-head {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#core-values .other-card .value-head img{
+    width: 40px;
+}
+
+#core-values .other-card .value-head h3{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--theme-blue);
+}
+
+
+/* ------------------------------career----------------------------------------- */
+
+
+#pills-tab{
+    justify-content: center;
+}
+
+.no-items{
+    font-size: 30px;
+    color: var(--theme-blue);
+    text-align: center;
+    margin-top: 30px;
+}
+
+.job-card{
+    background: #f3f3f3;
+    border-radius: var(--border-rad);
+    padding: 20px;
+    background-clip: content-box;
+}
+
+.job-card .content{
+    padding: 25px;
+}
+
+.job-card .content .job-name{
+    font-size: 24px;
+    color: var(--theme-blue);
+    font-weight: 600;
+    padding-bottom: 7px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--theme-blue);
+}
+
+.job-card .content .job-req h4{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--theme-blue);
+}
+
+.job-card .content a{
+    font-size: 16px;
+    color: var(--theme-blue);
+    font-weight: 600;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #ffffff;
+    background-color: var(--theme-blue);
+    border-radius: 75px;
+}
+
+.nav-pills .nav-link, .nav-pills .show > .nav-link {
+    background-color: #ffffff;
+    border-radius: 75px;
+}
+

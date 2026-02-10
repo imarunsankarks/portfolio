@@ -1,0 +1,13 @@
+<svg id="outline-group-24px" xmlns="http://www.w3.org/2000/svg" width="109.413" height="109.413" viewBox="0 0 109.413 109.413">
+    <g id="Bounding_Boxes">
+        <path id="Path_3452" data-name="Path 3452" d="M0,0H109.413V109.413H0Z" fill="none" />
+    </g>
+    <g id="Outline" transform="translate(1.741 17.631)">
+        <g id="Group_376" data-name="Group 376">
+            <path id="Path_3453" data-name="Path 3453" d="M39.076,13.75C26.682,13.75,2,19.946,2,32.288v9.269H76.153V32.288C76.153,19.946,51.471,13.75,39.076,13.75ZM14.394,30.964c4.448-3.071,15.2-6.626,24.682-6.626s20.234,3.549,24.682,6.621Z" transform="translate(-2 32.595)" fill="#0d335d" stroke="#cff1fd" stroke-width="1" />
+            <path id="Path_3454" data-name="Path 3454" d="M24.038,42.076A18.538,18.538,0,1,0,5.5,23.538,18.538,18.538,0,0,0,24.038,42.076Zm0-26.483a7.934,7.934,0,1,1-5.621,2.324A7.944,7.944,0,0,1,24.038,15.594Z" transform="translate(13.038 -5)" fill="#0d335d" stroke="#cff1fd" stroke-width="1" />
+            <path id="Path_3455" data-name="Path 3455" d="M16.04,13.81c6.144,4.45,10.382,10.382,10.382,18.22V41.3H47.608V32.03C47.608,21.331,29.07,15.24,16.04,13.81Z" transform="translate(58.324 32.854)" fill="#0d335d" stroke="#cff1fd" stroke-width="1" />
+            <path id="Path_3456" data-name="Path 3456" d="M21.444,42.076A18.538,18.538,0,1,0,21.444,5,18.25,18.25,0,0,0,13.5,6.853a28.816,28.816,0,0,1,5.3,16.685,28.816,28.816,0,0,1-5.3,16.685,18.25,18.25,0,0,0,7.944,1.853Z" transform="translate(47.411 -5)" fill="#0d335d" stroke="#cff1fd" stroke-width="1" />
+        </g>
+    </g>
+</svg>

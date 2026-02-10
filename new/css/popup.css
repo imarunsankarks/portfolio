@@ -1,0 +1,302 @@
+#popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  border-radius: var(--border-rad);
+  flex-direction: column;
+}
+#closePopup {
+  position: absolute;
+  right: 20px;
+  border: 1px solid;
+  background: #ef3a3a;
+  color: white;
+  padding: 2px 10px;
+  font-size: 14px;
+  border-radius: 20px;
+}
+@keyframes zoomAnim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#popup a {
+  font-weight: 700;
+  color: var(--theme-blue);
+  font-size: 20px;
+  text-align: center;
+  animation: zoomAnim 1.2s linear infinite;
+}
+#popup img {
+  width: auto;
+  height: 55vh;
+}
+/* Overlay to darken the background */
+#pop-up-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 990;
+}
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+
+
+/* -----------------------------------------event page---------------------------------------- */
+#event-banner {
+  height: calc(100vh - 120px);
+  margin: 80px 0 40px;
+  color: #ffffff !important;
+}
+#event-banner .container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: url(../assets/events/cisco-event-banner.webp);
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 30px;
+}
+
+#event-banner .container .row {
+  height: 100%;
+  padding: 30px;
+}
+
+#event-banner .event-banner-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#event-banner .event-banner-content .top {
+  display: inline-flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+}
+#event-banner .event-banner-content .top p{
+    font-weight: 100;
+}
+
+#event-banner .event-banner-content .top img {
+  width: 250px;
+  filter: invert(1) brightness(200) grayscale(1) saturate(0);
+}
+#event-banner .event-banner-content .middle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#event-banner .event-banner-content .middle h1 {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+#event-banner .event-banner-content .middle p {
+  width: 28vw;
+  text-align: end;
+  font-size: 22px;
+  font-weight: 100;
+}
+
+#event-banner .event-banner-content .bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#event-banner .event-banner-content .bottom p{
+    font-weight: 100;
+}
+
+#event-banner .event-banner-content .bottom .in-association {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#event-banner .event-banner-content .bottom .line {
+  width: 2px;
+  height: 50px;
+  background: #ffffff;
+}
+
+#event-banner .event-banner-content .bottom img {
+  width: 150px;
+}
+
+#cisco-event .why-gallery {
+    display: flex;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  
+  #cisco-event .why-left {
+    width: 50%;
+  }
+  
+  #cisco-event .why-detailsWrapper {
+    margin-right: auto;
+    width: 90%;
+}
+  #cisco-event .why-details1 {
+    /* height: 600px !important; */
+    justify-content: flex-end !important;
+  }
+  #cisco-event .why-details1 .section-title {
+    background: #ffffff;
+  }
+  #cisco-event .why-details {
+    height: 100%;
+    margin-left: 10px;
+    display: flex;
+    padding: 30px 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  
+  #cisco-event .why-details h3 {
+    margin-bottom: 20px;
+  }
+  
+  
+  #cisco-event .why-details .banner-button1 {
+    width: 180px;
+  }
+  
+  #cisco-event .why-details .section-sub-heading {
+    position: relative;
+  }
+  
+  #cisco-event .why-details p span{
+    font-weight: 800;
+    color: var(--theme-blue);
+    /* font-family: "Sora", sans-serif; */
+  }
+  
+  
+  #cisco-event .why-right {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+  }
+  
+  #cisco-event .why-photos {
+    width: 100%;
+    height: 30vw;
+    position: relative;
+    border-radius: 0px;
+  }
+  
+  #cisco-event .why-photo {
+    position: absolute;
+    width: 100%;
+    background: #f3f3f3;
+    border-radius: 30px;
+    padding: 40px;
+}
+  
+  #cisco-event .why-photo img {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  
+  #cisco-event .why_sec_title {
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin-bottom: 40px;
+  }
+
+  #cisco-event form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  #cisco-event form .form-field {
+    width: 48%;
+    padding: 20px 0;
+    border-radius: 0;
+    border: 0;
+    background-color: #f3f3f300;
+    border-bottom: 1px solid var(--theme-blue);
+  }
+
+  #cisco-event form .form-field:focus{
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid var(--theme-sblue);
+  }
+  
+  
+  #cisco-event .form-heading {
+    font-weight: 600;
+    color: var(--theme-blue);
+    margin-bottom: 25px;
+  }
+
+  #cisco-event .event-details{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 20px;
+  }
+
+  #cisco-event .event-details .each-event-details {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+}
+
+#cisco-event .event-details .each-event-details p{
+    margin: 0;
+}
+#cisco-event .event-details .each-event-details p span{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#cisco-event .event-details .each-event-details i{
+   font-size: 30px;
+}

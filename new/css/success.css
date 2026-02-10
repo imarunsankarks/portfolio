@@ -1,0 +1,77 @@
+.stories-card img{
+    width: 100%;
+    height: 350px;
+    padding-right: 30%;
+    object-fit: cover;
+}
+
+.stories-card{
+    position: relative;
+}
+
+.stories-card .content{
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    padding: 20px;
+    background: #f3f3f3;
+    width: 400px;
+}
+
+.stories-card .content h3{
+    font-size: 20px;
+    color: var(--theme-blue);
+    font-weight: 600;
+}
+
+.stories-card .content button{
+    font-size: 16px;
+    color: var(--theme-blue);
+    font-weight: 600;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.modal-form{
+    background: #0000009d;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.modal-header, .modal-footer{
+    border: 0;
+}
+
+#pdfForm input{
+    width: 100%;
+    padding: 10px;
+    padding-left: 0;
+    border: 0;
+    border-bottom: 1px solid var(--theme-blue);
+}
+#pdfForm input:focus{
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid var(--theme-blue);
+}
+
+#pdfForm select{
+    padding: 10px;
+    border: 0;
+    background: #f3f3f3;
+}
+
+.button-close{
+    background: transparent;
+    border: none;
+    color: red;
+    font-weight: 600;
+
+}
+.download-button{
+    background: var(--theme-blue);
+    color: #ffffff;
+    border-radius: 30px;
+    padding: 3px 20px;
+}
