@@ -83,7 +83,7 @@ function smoothScroll(content, viewport, smoothness) {
       start: 0,
       end: refreshHeight,
       refreshPriority: -999,
-      scrub: 1.3,
+      scrub: 0.3,
       onUpdate: (self) => {
         if (isProxyScrolling) {
           killScrub(self);
@@ -116,9 +116,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   const whatsappLink = document.createElement("a");
   const customMessage = encodeURIComponent("Hi, I am looking for AV solutions..");
   whatsappLink.href = `https://wa.me/+918075488943?text=${customMessage}`;
-  whatsappLink.target = "_blank";  
-  const whatsappImage = document.createElement("img"); 
-  whatsappImage.src = "https://resurgent.co.in/wp-content/themes/resurgent/assets/logos/whatsapp-logo.webp"; 
+  whatsappLink.target = "_blank";
+  const whatsappImage = document.createElement("img");
+  whatsappImage.src = "https://resurgent.co.in/wp-content/themes/resurgent/assets/logos/whatsapp-logo.webp";
   whatsappImage.alt = "Chat with us on WhatsApp";
 
   whatsappLink.appendChild(whatsappImage);
