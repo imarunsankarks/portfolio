@@ -17,8 +17,8 @@ Version: 1.0
 }
 
 :root {
-  --theme-blue: #0d335d;
-  --theme-sblue: #18bcf3;
+  --theme-blue: #ff8686;
+  --theme-sblue: #fff1a1;
   --border-rad: 15px;
   --animate-delay: 0.1s;
   --tb-base-font: "Raleway", sans-serif !important;
@@ -26,6 +26,7 @@ Version: 1.0
 
 body {
   font-family: "Raleway", sans-serif;
+  color: #e7e7e7;
 }
 
 a {
@@ -419,111 +420,7 @@ h6 {
   transform: scale(10);
 }
 
-.fourth-carousel .owl-stage-outer .owl-item.active {
-  animation: fadeIn 0.5s ease forwards;
-  opacity: 1;
-}
 
-.fourth-carousel .owl-stage-outer .owl-item.active .main-logo {
-  animation: zoomIn 0.6s linear forwards;
-  opacity: 1;
-}
-
-.fourth-carousel .owl-stage-outer .owl-item.active .main-title {
-  animation: slideInUp 0.6s linear forwards;
-  opacity: 1;
-}
-
-.fourth-carousel .owl-stage-outer .owl-item.active .top-head {
-  animation: fadeIn 1s linear forwards;
-  opacity: 1;
-}
-
-.fourth-carousel .owl-stage-outer .owl-item.active .sub-head {
-  animation: fadeIn 1s linear forwards;
-  opacity: 1;
-}
-
-/* .fourth-carousel .owl-stage-outer .owl-item {
-  animation: zoomOut 1s linear forwards;
-  opacity: 1;
-} */
-
-.fourth-carousel .owl-stage-outer .owl-item .item {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  z-index: 9;
-  position: relative;
-}
-
-.fourth-carousel .owl-stage-outer .owl-item .item.bg-0 img {
-  width: 420px;
-  transform: translateY(20px);
-}
-
-.fourth-carousel .owl-stage-outer .owl-item .item.bg-0::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url(../assets/home/resurgent-banner-3.webp);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: brightness(0.8);
-  z-index: -1;
-}
-
-.fourth-carousel .owl-stage-outer .owl-item .item.bg-1::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url(../assets/home/resurgent-banner.webp);
-  background-position: 20%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: brightness(0.8);
-  z-index: -1;
-}
-
-.fourth-carousel .owl-stage-outer .owl-item .item.bg-2::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url(../assets/home/banner-2.webp);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: brightness(0.5);
-  z-index: -1;
-}
-
-.fourth-carousel .owl-stage-outer .owl-item .item.bg-3::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url(../assets/home/image.webp);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: brightness(0.5);
-  z-index: -1;
-}
 
 .carousel-height-fix {
   height: 160px;
@@ -590,7 +487,7 @@ h6 {
 
 .banner-text {
   /* height: 100vh; */
-  background: linear-gradient(125deg, var(--theme-blue), var(--theme-sblue));
+  /* background: linear-gradient(125deg, var(--theme-blue), var(--theme-sblue)); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -773,8 +670,8 @@ h6 {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  height: 370px;
-  box-shadow: 0 0 30px 10px #ffffff8a;
+  height: 500px;
+  /* box-shadow: 0 0 30px 10px #ffffff8a; */
 }
 
 .sticky-image::before {

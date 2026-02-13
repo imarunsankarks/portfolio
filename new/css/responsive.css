@@ -303,9 +303,6 @@
     align-items: center;
   }
 
-  .fourth-carousel .owl-stage-outer .owl-item .item.bg-0 img {
-    transform: translateY(0px);
-  }
 
   .br-1 {
     border: 0;
@@ -1943,9 +1940,7 @@
     padding-top: 30px;
   }
 
-  .fourth-carousel .owl-stage-outer .owl-item .item {
-    height: 70vh;
-  }
+
 
   .banner {
     height: 70vh;
@@ -1956,9 +1951,7 @@
     height: 20vh;
   }
 
-  .fourth-carousel .owl-stage-outer .owl-item .item.bg-1::before {
-    background-position: 80%;
-  }
+
 
   .next-prev-blog .previous-post a,
   .next-prev-blog .next-post a {
@@ -1977,9 +1970,7 @@
     width: 90px;
   }
 
-  .fourth-carousel .owl-stage-outer .owl-item .item.bg-0 img {
-    width: 85vw;
-  }
+
 
   .sticky-image {
     height: 250px;

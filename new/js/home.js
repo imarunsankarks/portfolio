@@ -1,29 +1,4 @@
-// ---------------------------------banner-carousel-------------------------------------
-var owl1 = $(".fourth-carousel");
-owl1.owlCarousel({
-  loop: true,
-  margin: 0,
-  nav: false,
-  dots: false,
-  smartSpeed: 3000,
-  autoplay: true,
-  autoplayTimeout: 5000,
-  mouseDrag: false,
-  autoplayHoverPause: false,
-  animateOut: "fadeOut",
-  // animateIn: "fadeInUp",
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 1,
-    },
-    1200: {
-      items: 1,
-    },
-  },
-});
+
 
 // -----------------------------------solutions-----------------------------------------------
 
