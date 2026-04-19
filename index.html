@@ -34,19 +34,19 @@
 
   <header id="about" class="pt-40 pb-20 hero-gradient">
     <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2 text-center md:text-left">
+      <div class="md:w-3/5 text-center md:text-left">
         <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
           Hi, I'm <span class="text-blue-600">Arun Sankar</span>
         </h1>
-        <p class="text-xl text-gray-600 mb-8 max-w-lg">
-          Full Stack Developer with <span id="experience-years" class="font-bold text-blue-600 text-2xl">...</span> years of experience specializing in React, Node.js, and the MERN stack.
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl">
+          Full Stack Developer with almost <span id="experience-years" class="font-bold text-blue-600 text-2xl">3</span> years of experience specializing in the MERN stack. Expert in building <span class="text-gray-900 font-semibold">scalable Node.js microservices</span> and <span class="text-gray-900 font-semibold">event-driven systems</span> with advanced AI Prompt Engineering.
         </p>
         <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
           <a href="#projects" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 shadow-lg transition">View Projects</a>
           <a href="mailto:imarunsankarks@gmail.com" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition">Get In Touch</a>
         </div>
       </div>
-      <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+      <div class="md:w-2/5 mt-12 md:mt-0 flex justify-center">
         <img src="https://illustrations.popsy.co/amber/freelancer.svg" alt="Developer Illustration" class="w-full max-w-md">
       </div>
     </div>
@@ -57,22 +57,22 @@
       <div class="flex flex-col md:flex-row-reverse items-center gap-12">
         <div class="md:w-1/2">
           <h2 class="text-3xl font-bold mb-6">Technical Expertise</h2>
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="p-4 border rounded-xl hover:border-blue-500 transition">
-              <h4 class="font-bold text-blue-600 mb-2">Frontend</h4>
-              <p class="text-sm text-gray-600">React.js, Next.js, Redux, Material UI, Tailwind</p>
+              <h4 class="font-bold text-blue-600 mb-2">Frontend & Languages</h4>
+              <p class="text-sm text-gray-600">React.js, Next.js, TypeScript, Redux, JavaScript (ES6+), HTML5/CSS3.</p>
             </div>
             <div class="p-4 border rounded-xl hover:border-blue-500 transition">
-              <h4 class="font-bold text-blue-600 mb-2">Backend</h4>
-              <p class="text-sm text-gray-600">Node.js, Express.js, Kafka</p>
+              <h4 class="font-bold text-blue-600 mb-2">Backend & AI</h4>
+              <p class="text-sm text-gray-600">Node.js, Express.js, Prompt Engineering (LLM Orchestration), Microservices.</p>
             </div>
             <div class="p-4 border rounded-xl hover:border-blue-500 transition">
-              <h4 class="font-bold text-blue-600 mb-2">Databases</h4>
-              <p class="text-sm text-gray-600">MongoDB, SQL, MariaDB</p>
+              <h4 class="font-bold text-blue-600 mb-2">Data & Messaging</h4>
+              <p class="text-sm text-gray-600">MongoDB (Aggregation/Indexing), Kafka, MariaDB, Redis, SQL.</p>
             </div>
             <div class="p-4 border rounded-xl hover:border-blue-500 transition">
-              <h4 class="font-bold text-blue-600 mb-2">Tools</h4>
-              <p class="text-sm text-gray-600">AWS EC2, Git, Figma, JSReport</p>
+              <h4 class="font-bold text-blue-600 mb-2">Cloud & DevOps</h4>
+              <p class="text-sm text-gray-600">AWS (EC2/S3), Git, Docker, Jenkins, Jest Testing.</p>
             </div>
           </div>
         </div>
@@ -83,42 +83,37 @@
     </div>
   </section>
 
-  <section id="experience" class="py-20 bg-white">
+  <section id="experience" class="py-20 bg-gray-50">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl font-bold text-center mb-16">Professional Experience</h2>
 
       <div class="flex flex-col lg:flex-row items-start gap-12 max-w-6xl mx-auto">
-
         <div class="w-full lg:w-2/3 space-y-12">
+
           <div class="relative pl-8 border-l-2 border-blue-600">
             <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-600 rounded-full"></div>
-            <h3 class="text-xl font-bold text-gray-900">SDE 1</h3>
+            <h3 class="text-xl font-bold text-gray-900">SDE I (MERN Stack)</h3>
             <p class="text-blue-600 font-semibold text-lg">Grasko Solutions</p>
             <p class="text-gray-500 text-sm mb-4">August 2024 - Present</p>
             <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm md:text-base">
-              <li>Engineered and optimized reusable React component architecture, implementing advanced state management
-                with Redux, Context API, and custom hooks.</li>
-              <li>Built and maintained RESTful Node.js services, implementing custom routing, middleware, authentication,
-                and validation layers, serving high-volume internal APIs.</li>
-              <li>Developed event-driven microservice integrations by publishing domain events to Apache Kafka, enabling
-                asynchronous processing and system decoupling.</li>
-              <li>Developed Jest-based test suites for React components and Node.js APIs, including mocks, spies, and async
-                testing.</li>
-              <li>Optimized database performance through aggregation pipelines, indexing, and query tuning across MongoDB
-                and MariaDB.</li>
+              <li>Engineered scalable Node.js backend using Express.js and custom middleware, supporting 1,000+ daily active requests.</li>
+              <li>Reduced API response latency by 40% through Redis caching and MongoDB aggregation optimization.</li>
+              <li>Integrated AI modules using Prompt Engineering to ensure production-ready, schema-validated LLM outputs.</li>
+              <li>Implemented Kafka event streaming to decouple microservices and improve system fault tolerance.</li>
+              <li>Maintained over 85% code coverage for critical Node.js logic using the Jest testing framework.</li>
             </ul>
           </div>
 
           <div class="relative pl-8 border-l-2 border-blue-300">
             <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-300 rounded-full"></div>
-            <h3 class="text-xl font-bold text-gray-900">MERN Stack Developer</h3>
+            <h3 class="text-xl font-bold text-gray-900">Full Stack Developer</h3>
             <p class="text-blue-600 font-semibold text-lg">Resurgent AV</p>
             <p class="text-gray-500 text-sm mb-4">January 2024 - August 2024</p>
             <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm md:text-base">
-              <li>Developed a custom React room configurator increasing conversion rates by 25%.</li>
-              <li>Built an AI-integrated PWA using MERN stack for daily project expense tracking.</li>
-              <li>Implemented JWT-based authentication for secure access across 200+ users.</li>
-              <li>Deployed backend services on AWS EC2 achieving 99.9% uptime.</li>
+              <li>Developed a React room configurator with dynamic UI updates, increasing conversion rates by 25%.</li>
+              <li>Architected a MERN PWA for project expense tracking, replacing manual workflows for 200+ users.</li>
+              <li>Managed AWS EC2 deployments and health monitoring, ensuring 99.9% system uptime.</li>
+              <li>Boosted organic traffic by 35% through UI/UX revamps and SEO-optimized React components.</li>
             </ul>
           </div>
 
@@ -126,19 +121,18 @@
             <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-100 rounded-full"></div>
             <h3 class="text-xl font-bold text-gray-900">Full Stack Web Developer</h3>
             <p class="text-blue-600 font-semibold text-lg">Webomindapps</p>
-            <p class="text-gray-500 text-sm mb-4">June 2023 - January 2024</p>
+            <p class="text-gray-500 text-sm mb-4">July 2023 - January 2024</p>
             <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm md:text-base">
-              <li>Developed responsive e-commerce platforms with authentication, cart, and wishlist features.</li>
-              <li>Built MERN dashboards for CRUD operations reducing update time by 50%.</li>
-              <li>Led development of UAE branch website with a 5-member team.</li>
+              <li>Led end-to-end development of a Canada-based E-commerce platform with secure payment gateway integration.</li>
+              <li>Directed a 5-member team for the UAE branch website development, managing the full SDLC.</li>
+              <li>Delivered 15+ production-ready sites across diverse sectors including Healthcare and Finance.</li>
             </ul>
           </div>
         </div>
 
         <div class="w-full lg:w-1/3 flex justify-center lg:sticky lg:top-32">
-          <img src="https://illustrations.popsy.co/amber/home-office.svg" alt="Professional Experience Illustration" class="w-full max-w-sm">
+          <img src="https://illustrations.popsy.co/amber/home-office.svg" alt="Experience Illustration" class="w-full max-w-sm">
         </div>
-
       </div>
     </div>
   </section>
@@ -237,7 +231,7 @@
     </div>
   </footer>
 
-  <script>
+  <!-- <script>
     function calculateExperience() {
       const startDate = new Date('2023-07-04');
       const today = new Date();
@@ -249,7 +243,7 @@
     }
 
     calculateExperience();
-  </script>
+  </script> -->
 
 </body>
 
