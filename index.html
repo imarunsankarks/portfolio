@@ -1,250 +1,429 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arun Sankar | Full Stack Developer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    .hero-gradient {
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arun Sankar K S | Full Stack Developer & MERN Specialist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Config for custom fonts and smooth design -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        darkbg: '#0a0a0c',
+                        cardbg: '#121216',
+                        accent: '#3b82f6',
+                        accentglow: 'rgba(59, 130, 246, 0.15)'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom scrollbar and aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0c;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f3f46;
+        }
+        .glow-effect {
+            box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.2);
+        }
+    </style>
 </head>
+<body class="bg-[#0a0a0c] text-slate-100 font-sans antialiased selection:bg-blue-500 selection:text-white min-h-screen">
 
-<body class="bg-gray-50 text-gray-900 font-sans">
-
-  <nav class="p-6 fixed w-full z-50 top-0 bg-white/80 backdrop-blur-md shadow-sm">
-    <div class="container mx-auto flex justify-between items-center">
-      <a href="#" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">AS.</a>
-      <div class="hidden md:flex space-x-8 font-medium">
-        <a href="#about" class="hover:text-blue-600 transition">About</a>
-        <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
-        <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
-        <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <header id="about" class="pt-40 pb-20 hero-gradient">
-    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-      <div class="md:w-3/5 text-center md:text-left">
-        <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
-          Hi, I'm <span class="text-blue-600">Arun Sankar</span>
-        </h1>
-        <p class="text-xl text-gray-600 mb-8 max-w-2xl">
-          Full Stack Developer with almost <span id="experience-years" class="font-bold text-blue-600 text-2xl">3</span> years of experience specializing in the MERN stack. Expert in building <span class="text-gray-900 font-semibold">scalable Node.js microservices</span> and <span class="text-gray-900 font-semibold">event-driven systems</span> with advanced AI Prompt Engineering.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-          <a href="#projects" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 shadow-lg transition">View Projects</a>
-          <a href="mailto:imarunsankarks@gmail.com" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition">Get In Touch</a>
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0c]/80 backdrop-blur-md border-b border-slate-800/60">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#hero" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-blue-500 animate-pulse"></span>
+                Arun Sankar K S
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+                <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                <a href="#education" class="hover:text-white transition-colors">Education</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="mailto:imarunsankarks@gmail.com" class="hidden sm:inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-xl text-sm font-medium transition-all shadow-lg shadow-blue-500/20">
+                    <i class="fa-regular fa-envelope"></i> Let's Talk
+                </a>
+                <!-- Mobile Menu Toggle -->
+                <button id="menu-btn" aria-label="Toggle menu" class="md:hidden text-slate-300 hover:text-white text-xl p-2">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
-      </div>
-      <div class="md:w-2/5 mt-12 md:mt-0 flex justify-center">
-        <img src="https://illustrations.popsy.co/amber/freelancer.svg" alt="Developer Illustration" class="w-full max-w-md">
-      </div>
-    </div>
-  </header>
-
-  <section id="skills" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-      <div class="flex flex-col md:flex-row-reverse items-center gap-12">
-        <div class="md:w-1/2">
-          <h2 class="text-3xl font-bold mb-6">Technical Expertise</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="p-4 border rounded-xl hover:border-blue-500 transition">
-              <h4 class="font-bold text-blue-600 mb-2">Frontend & Languages</h4>
-              <p class="text-sm text-gray-600">React.js, Next.js, TypeScript, Redux, JavaScript (ES6+), HTML5/CSS3.</p>
-            </div>
-            <div class="p-4 border rounded-xl hover:border-blue-500 transition">
-              <h4 class="font-bold text-blue-600 mb-2">Backend & AI</h4>
-              <p class="text-sm text-gray-600">Node.js, Express.js, Prompt Engineering (LLM Orchestration), Microservices.</p>
-            </div>
-            <div class="p-4 border rounded-xl hover:border-blue-500 transition">
-              <h4 class="font-bold text-blue-600 mb-2">Data & Messaging</h4>
-              <p class="text-sm text-gray-600">MongoDB (Aggregation/Indexing), Kafka, MariaDB, Redis, SQL.</p>
-            </div>
-            <div class="p-4 border rounded-xl hover:border-blue-500 transition">
-              <h4 class="font-bold text-blue-600 mb-2">Cloud & DevOps</h4>
-              <p class="text-sm text-gray-600">AWS (EC2/S3), Git, Docker, Jenkins, Jest Testing.</p>
-            </div>
-          </div>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#121216] border-b border-slate-800 px-6 py-4 space-y-3">
+            <a href="#about" class="block text-slate-300 hover:text-white py-1">About</a>
+            <a href="#experience" class="block text-slate-300 hover:text-white py-1">Experience</a>
+            <a href="#skills" class="block text-slate-300 hover:text-white py-1">Skills</a>
+            <a href="#education" class="block text-slate-300 hover:text-white py-1">Education</a>
+            <a href="#contact" class="block text-slate-300 hover:text-white py-1">Contact</a>
         </div>
-        <div class="md:w-1/2">
-          <img src="https://illustrations.popsy.co/amber/genius.svg" alt="Skills Illustration" class="w-full max-w-sm mx-auto">
-        </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <section id="experience" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-16">Professional Experience</h2>
-
-      <div class="flex flex-col lg:flex-row items-start gap-12 max-w-6xl mx-auto">
-        <div class="w-full lg:w-2/3 space-y-12">
-
-          <div class="relative pl-8 border-l-2 border-blue-600">
-            <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-600 rounded-full"></div>
-            <h3 class="text-xl font-bold text-gray-900">SDE I (MERN Stack)</h3>
-            <p class="text-blue-600 font-semibold text-lg">Grasko Solutions</p>
-            <p class="text-gray-500 text-sm mb-4">August 2024 - Present</p>
-            <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm md:text-base">
-              <li>Engineered scalable Node.js backend using Express.js and custom middleware, supporting 1,000+ daily active requests.</li>
-              <li>Reduced API response latency by 40% through Redis caching and MongoDB aggregation optimization.</li>
-              <li>Integrated AI modules using Prompt Engineering to ensure production-ready, schema-validated LLM outputs.</li>
-              <li>Implemented Kafka event streaming to decouple microservices and improve system fault tolerance.</li>
-              <li>Maintained over 85% code coverage for critical Node.js logic using the Jest testing framework.</li>
-            </ul>
-          </div>
-
-          <div class="relative pl-8 border-l-2 border-blue-300">
-            <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-300 rounded-full"></div>
-            <h3 class="text-xl font-bold text-gray-900">Full Stack Developer</h3>
-            <p class="text-blue-600 font-semibold text-lg">Resurgent AV</p>
-            <p class="text-gray-500 text-sm mb-4">January 2024 - August 2024</p>
-            <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm md:text-base">
-              <li>Developed a React room configurator with dynamic UI updates, increasing conversion rates by 25%.</li>
-              <li>Architected a MERN PWA for project expense tracking, replacing manual workflows for 200+ users.</li>
-              <li>Managed AWS EC2 deployments and health monitoring, ensuring 99.9% system uptime.</li>
-              <li>Boosted organic traffic by 35% through UI/UX revamps and SEO-optimized React components.</li>
-            </ul>
-          </div>
-
-          <div class="relative pl-8 border-l-2 border-blue-100">
-            <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-100 rounded-full"></div>
-            <h3 class="text-xl font-bold text-gray-900">Full Stack Web Developer</h3>
-            <p class="text-blue-600 font-semibold text-lg">Webomindapps</p>
-            <p class="text-gray-500 text-sm mb-4">July 2023 - January 2024</p>
-            <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm md:text-base">
-              <li>Led end-to-end development of a Canada-based E-commerce platform with secure payment gateway integration.</li>
-              <li>Directed a 5-member team for the UAE branch website development, managing the full SDLC.</li>
-              <li>Delivered 15+ production-ready sites across diverse sectors including Healthcare and Finance.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="w-full lg:w-1/3 flex justify-center lg:sticky lg:top-32">
-          <img src="https://illustrations.popsy.co/amber/home-office.svg" alt="Experience Illustration" class="w-full max-w-sm">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold mb-4">Featured Work</h2>
-        <p class="text-gray-600">Building scalable solutions across Healthcare, SaaS, and E-commerce.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <a target="_blank" href="https://entepaisa.onrender.com">
-          <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
-            <img src="https://illustrations.popsy.co/amber/digital-nomad.svg" class="h-48 w-full object-contain p-6 bg-blue-50" alt="Work">
-            <div class="p-6 flex-grow">
-              <h3 class="font-bold text-xl mb-2">AI-Integrated Expense PWA</h3>
-              <p class="text-gray-600 text-sm mb-4">A MERN-based progressive web app for daily expense tracking with secure JWT authentication.</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="text-[10px] font-bold uppercase tracking-wider bg-gray-100 px-2 py-1 rounded">MERN Stack</span>
-                <span class="text-[10px] font-bold uppercase tracking-wider bg-gray-100 px-2 py-1 rounded">AWS EC2</span>
-              </div>
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 md:pt-44 md:pb-32 px-6 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-xs font-medium text-blue-400 mb-6 shadow-inner">
+                <i class="fa-solid fa-code"></i> Full Stack Developer &bull; MERN Specialist
             </div>
-          </div>
-        </a>
-
-        <a target="_blank" href="https://resurgent.co.in/room-configurator/">
-          <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
-            <img src="https://illustrations.popsy.co/amber/app-launch.svg" class="h-48 w-full object-contain p-6 bg-indigo-50" alt="Work">
-            <div class="p-6 flex-grow">
-              <h3 class="font-bold text-xl mb-2">Room Configurator</h3>
-              <p class="text-gray-600 text-sm mb-4">Custom React-based configurator that boosted conversion rates by 25% for Resurgent AV.</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="text-[10px] font-bold uppercase tracking-wider bg-gray-100 px-2 py-1 rounded">React</span>
-                <span class="text-[10px] font-bold uppercase tracking-wider bg-gray-100 px-2 py-1 rounded">UI/UX</span>
-              </div>
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+                Building scalable architectures & <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">high-performance apps</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Full Stack Developer with 3+ years of experience specializing in Node.js microservices, React architectures, event-driven Kafka systems, and AI workflow integration.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="#experience" class="bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-blue-500/25 flex items-center gap-2">
+                    Explore Experience <i class="fa-solid fa-arrow-down text-xs"></i>
+                </a>
+                <a href="#contact" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-medium px-6 py-3.5 rounded-xl transition-all flex items-center gap-2">
+                    Get in Touch
+                </a>
             </div>
-          </div>
-        </a>
-
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
-          <img src="https://illustrations.popsy.co/amber/product-launch.svg" class="h-48 w-full object-contain p-6 bg-green-50" alt="Work">
-          <div class="p-6 flex-grow">
-            <h3 class="font-bold text-xl mb-2">Enterprise Order Workflow</h3>
-            <p class="text-gray-600 text-sm mb-4">Refactored complex workflows for 48+ orders using SOLID principles and Kafka messaging.</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-[10px] font-bold uppercase tracking-wider bg-gray-100 px-2 py-1 rounded">Node.js</span>
-              <span class="text-[10px] font-bold uppercase tracking-wider bg-gray-100 px-2 py-1 rounded">Kafka</span>
+            <div class="flex items-center justify-center gap-6 mt-12 text-slate-400 text-xl">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="mailto:imarunsankarks@gmail.com" class="hover:text-blue-400 transition-colors" aria-label="Email">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+                <span class="text-slate-700">|</span>
+                <span class="text-xs text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-blue-500"></i> Bengaluru, Karnataka</span>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="education" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-      <div class="flex flex-col md:flex-row items-center gap-12">
-        <div class="md:w-1/2">
-          <img src="https://illustrations.popsy.co/amber/studying.svg" alt="Education Illustration" class="w-full max-w-sm mx-auto">
+    <!-- Profile Summary Section -->
+    <section id="about" class="py-20 px-6 border-t border-slate-900 bg-[#0c0c0f]">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-xs uppercase tracking-widest text-blue-500 font-semibold mb-2">Profile Overview</h2>
+                <h3 class="text-2xl sm:text-3xl font-bold text-white">Professional Summary</h3>
+            </div>
+            <div class="bg-[#121216] border border-slate-800/80 rounded-2xl p-8 sm:p-10 shadow-xl relative">
+                <div class="absolute -top-3 left-8 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                    3+ Years Experience
+                </div>
+                <p class="text-slate-300 text-base sm:text-lg leading-relaxed mt-2">
+                    Full Stack Developer with 3 years 4 months of professional experience specializing in the MERN stack. Expert in building scalable Node.js microservices, high-performance React architectures, and event-driven systems using Kafka. Proven track record in optimizing database queries and integrating AI workflows with advanced Prompt Engineering to deliver production-ready, high-fidelity outputs.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-800">
+                    <div class="text-center sm:text-left">
+                        <span class="block text-2xl font-bold text-white">3+ Years</span>
+                        <span class="text-sm text-slate-400">Industry Experience</span>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <span class="block text-2xl font-bold text-white">MERN & Microservices</span>
+                        <span class="text-sm text-slate-400">Core Expertise</span>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <span class="block text-2xl font-bold text-white">NITK & CET</span>
+                        <span class="text-sm text-slate-400">Alumni (M.Tech / B.Tech)</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="md:w-1/2">
-          <h2 class="text-3xl font-bold mb-8">Education</h2>
-          <div class="space-y-8">
-            <div class="relative pl-8 border-l-2 border-blue-600">
-              <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-600 rounded-full"></div>
-              <h3 class="text-xl font-bold text-gray-900">M.Tech</h3>
-              <p class="text-blue-600 font-semibold">National Institute of Technology Surathkal</p>
-              <p class="text-gray-500 text-sm mb-2">2020 - 2022</p>
-              <span class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full">CGPA: 9.41</span>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6 border-t border-slate-900">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-xs uppercase tracking-widest text-blue-500 font-semibold mb-2">Career Journey</h2>
+                <h3 class="text-2xl sm:text-3xl font-bold text-white">Professional Experience</h3>
             </div>
 
-            <div class="relative pl-8 border-l-2 border-blue-200">
-              <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-200 rounded-full"></div>
-              <h3 class="text-xl font-bold text-gray-900">B.Tech</h3>
-              <p class="text-blue-600 font-semibold">College of Engineering Trivandrum</p>
-              <p class="text-gray-500 text-sm mb-2">2015 - 2019</p>
-              <span class="bg-blue-50 text-blue-600 text-xs font-bold px-3 py-1 rounded-full">CGPA: 8.44</span>
+            <div class="space-y-12">
+                <!-- Grasko Solutions -->
+                <div class="relative pl-6 sm:pl-8 border-l-2 border-blue-600/40 group">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 ring-4 ring-[#0a0a0c]"></div>
+                    <div class="bg-[#121216] border border-slate-800/80 rounded-2xl p-6 sm:p-8 hover:border-slate-700 transition-all shadow-xl">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">SDE I (MERN Stack)</h4>
+                                <p class="text-blue-400 font-medium">Grasko Solutions</p>
+                            </div>
+                            <span class="inline-block bg-slate-900 border border-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium self-start sm:self-auto">
+                                Aug 2024 - Present
+                            </span>
+                        </div>
+                        <ul class="space-y-3 text-slate-300 text-sm sm:text-base leading-relaxed">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-blue-500 mt-1"></i>
+                                <span>Built different modular React component libraries with Redux and Context API, reducing code duplication by 30% and accelerating front-end deployment cycles.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-blue-500 mt-1"></i>
+                                <span>Developed and maintained RESTful Node.js services, implementing custom routing, middleware, authentication, and validation layers, serving high-volume internal APIs.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-blue-500 mt-1"></i>
+                                <span>Architected and developed real-time communication microservices for MultiCom using Java (Spring Boot) and React, enabling seamless WebRTC-based video conferencing and multi-channel SMS workflows across enterprise operations.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-blue-500 mt-1"></i>
+                                <span>Implemented Kafka-based event streaming to decouple microservices, improving system fault tolerance and enabling asynchronous processing for heavy background tasks.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-blue-500 mt-1"></i>
+                                <span>Optimized database performance through aggregation pipelines, indexing, and query tuning across MongoDB and MariaDB.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-blue-500 mt-1"></i>
+                                <span>Authored comprehensive unit and integration tests using Jest, maintaining over 85% code coverage for critical Node.js business logic.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Resurgent AV -->
+                <div class="relative pl-6 sm:pl-8 border-l-2 border-slate-800 group">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-[#0a0a0c] group-hover:bg-blue-500 transition-colors"></div>
+                    <div class="bg-[#121216] border border-slate-800/80 rounded-2xl p-6 sm:p-8 hover:border-slate-700 transition-all shadow-xl">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Full Stack Developer</h4>
+                                <p class="text-blue-400 font-medium">Resurgent AV</p>
+                            </div>
+                            <span class="inline-block bg-slate-900 border border-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium self-start sm:self-auto">
+                                Jan 2024 - Aug 2024
+                            </span>
+                        </div>
+                        <ul class="space-y-3 text-slate-300 text-sm sm:text-base leading-relaxed">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-blue-500 mt-1"></i>
+                                <span>Developed a MERN-based Room Configurator featuring dynamic UI updates, which improved client decision-making efficiency and increased user conversion rates by 25%.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-blue-500 mt-1"></i>
+                                <span>Designed and deployed an AI integrated PWA for project expense tracking, replacing manual workflows for 200+ users with a secure, JWT-authenticated digital system.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-blue-500 mt-1"></i>
+                                <span>Managed deployment and server health on AWS EC2, ensuring 99.9% uptime through automated monitoring and stable environment configuration.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-blue-500 mt-1"></i>
+                                <span>Increased organic site traffic by 35% through a full architectural revamp focused on UI/UX best practices and SEO-optimized React components.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Webomindapps -->
+                <div class="relative pl-6 sm:pl-8 border-l-2 border-slate-800 group">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-[#0a0a0c] group-hover:bg-blue-500 transition-colors"></div>
+                    <div class="bg-[#121216] border border-slate-800/80 rounded-2xl p-6 sm:p-8 hover:border-slate-700 transition-all shadow-xl">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Full Stack Web Developer</h4>
+                                <p class="text-blue-400 font-medium">Webomindapps</p>
+                            </div>
+                            <span class="inline-block bg-slate-900 border border-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium self-start sm:self-auto">
+                                Jul 2023 - Jan 2024
+                            </span>
+                        </div>
+                        <ul class="space-y-3 text-slate-300 text-sm sm:text-base leading-relaxed">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-blue-500 mt-1"></i>
+                                <span>Led the end-to-end development of a Canada-based E-commerce platform, integrating secure payment gateways and optimizing the checkout flow for high conversion.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-blue-500 mt-1"></i>
+                                <span>Directed the development of the UAE branch corporate website with a 5-member team, managing the full SDLC from requirement gathering to deployment.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-blue-500 mt-1"></i>
+                                <span>Delivered 15+ production-ready static and dynamic websites across diverse sectors (Healthcare, Finance, Tourism), focusing on responsive design and performance.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <footer id="contact" class="py-12 bg-gray-900 text-white">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
-      <p class="text-gray-400 mb-8">Currently based in Bengaluru, Karnataka</p>
-      <div class="flex justify-center space-x-8 mb-12">
-        <a href="https://github.com/imarunsankarks" class="text-3xl hover:text-blue-400 transition"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/arun-sankar-k-s-a693961a4" class="text-3xl hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:imarunsankarks@gmail.com" class="text-3xl hover:text-blue-400 transition"><i class="fas fa-envelope"></i></a>
-      </div>
-      <p class="text-gray-500 text-sm">© 2026 Arun Sankar K S</p>
-    </div>
-  </footer>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 border-t border-slate-900 bg-[#0c0c0f]">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-xs uppercase tracking-widest text-blue-500 font-semibold mb-2">Expertise</h2>
+                <h3 class="text-2xl sm:text-3xl font-bold text-white">Technical Skills</h3>
+            </div>
 
-  <!-- <script>
-    function calculateExperience() {
-      const startDate = new Date('2023-07-04');
-      const today = new Date();
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Languages & Frameworks -->
+                <div class="bg-[#121216] border border-slate-800/80 rounded-2xl p-6 sm:p-8">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400">
+                            <i class="fa-solid fa-code text-lg"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Languages & Frameworks</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">JavaScript (ES6+)</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">TypeScript</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">Node.js</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">Express.js</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">React.js</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">Next.js</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">Redux</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">HTML5/CSS3</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">Python</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">Java</span>
+                    </div>
+                </div>
 
-      const diffInMs = today - startDate;
-      const years = diffInMs / (1000 * 60 * 60 * 24 * 365.25);
+                <!-- Backend & Database -->
+                <div class="bg-[#121216] border border-slate-800/80 rounded-2xl p-6 sm:p-8">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400">
+                            <i class="fa-solid fa-server text-lg"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Backend & Database</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">Microservices Architecture</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">RESTful APIs</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">MongoDB (Aggregation/Indexing)</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">MariaDB</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">SQL</span>
+                    </div>
+                </div>
 
-      document.getElementById('experience-years').innerText = years.toFixed(1);
-    }
+                <!-- Cloud & Tools -->
+                <div class="bg-[#121216] border border-slate-800/80 rounded-2xl p-6 sm:p-8 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400">
+                            <i class="fa-solid fa-cloud text-lg"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Cloud & Developer Tools</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">AWS (EC2 / S3)</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">Kafka</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">Git</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">Docker</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">Jenkins</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">Jest</span>
+                        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium">Figma</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    calculateExperience();
-  </script> -->
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-6 border-t border-slate-900">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-xs uppercase tracking-widest text-blue-500 font-semibold mb-2">Academic Background</h2>
+                <h3 class="text-2xl sm:text-3xl font-bold text-white">Education</h3>
+            </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- NITK M.Tech -->
+                <div class="bg-[#121216] border border-slate-800/80 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-blue-500/10 text-blue-400">2020 - 2022</span>
+                            <span class="text-sm font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-lg">CGPA: 9.41</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-1">M.Tech</h4>
+                        <p class="text-blue-400 font-medium">National Institute of Technology Karnataka (NITK)</p>
+                    </div>
+                </div>
+
+                <!-- CET B.Tech -->
+                <div class="bg-[#121216] border border-slate-800/80 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">2015 - 2019</span>
+                            <span class="text-sm font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-lg">CGPA: 8.44</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-1">B.Tech</h4>
+                        <p class="text-blue-400 font-medium">College of Engineering Trivandrum (CET)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 border-t border-slate-900 bg-[#0c0c0f]">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-xs uppercase tracking-widest text-blue-500 font-semibold mb-2">Get In Touch</h2>
+            <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Let's Build Something Together</h3>
+            <p class="text-slate-400 mb-8 max-w-lg mx-auto">
+                Whether you have a question, an opportunity, or just want to connect, feel free to drop a message.
+            </p>
+            <div class="inline-flex flex-col sm:flex-row items-center gap-4 bg-[#121216] border border-slate-800 p-3 sm:p-4 rounded-2xl shadow-xl">
+                <div class="flex items-center gap-3 px-4 py-2 text-slate-300">
+                    <i class="fa-regular fa-envelope text-blue-500"></i>
+                    <span class="font-medium text-sm sm:text-base">imarunsankarks@gmail.com</span>
+                </div>
+                <a href="mailto:imarunsankarks@gmail.com" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-3 rounded-xl transition-all shadow-lg shadow-blue-500/20 text-sm">
+                    Send Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-slate-900 text-center text-slate-500 text-sm">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Arun Sankar K S. All rights reserved.</p>
+            <div class="flex items-center gap-4">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
-
 </html>
